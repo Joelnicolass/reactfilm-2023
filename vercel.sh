@@ -13,6 +13,6 @@ else
     echo $VITE_VERCEL_BRANCH_URL
     echo $VERCEL_BRANCH_URL
 
-    echo $BRANCH_NAME
+    echo $1
     echo "BRANCH NOT MATCHED"
 fi
