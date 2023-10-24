@@ -4,8 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --mode dev",
+    "dev:qa": "vite --mode qa",
+    "dev:uat": "vite --mode uat",
+    "dev:prod": "vite --mode prod",
+    "build": "vite build --mode prod",
+    "build:qa": "vite build --mode qa",
+    "build:uat": "vite build --mode uat",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest"
@@ -26,6 +31,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "jsdom": "^22.1.0",
     "vite": "^4.4.5",
+    "vite-plugin-replace-files": "^1.1.0",
     "vitest": "^0.34.6"
   }
 }
