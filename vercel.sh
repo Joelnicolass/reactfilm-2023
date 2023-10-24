@@ -7,7 +7,10 @@ elif [[ $VERCEL_GIT_COMMIT_REF == "UAT"  ]] ; then
 elif [[ $VERCEL_GIT_COMMIT_REF == "QA"  ]] ; then
     npm run build:qa
 else
-    echo "BRANCH: $VITE_VERCEL_GIT_COMMIT_REF"
-    echo "URL: $VITE_VERCEL_BRANCH_URL"
+    echo $VITE_VERCEL_GIT_COMMIT_REF
+    echo $VERCEL_GIT_COMMIT_REF
+
+    echo $VITE_VERCEL_BRANCH_URL
+    echo $VERCEL_BRANCH_URL
     echo "BRANCH NOT MATCHED"
 fi
