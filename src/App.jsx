@@ -1,8 +1,7 @@
 const App = () => {
   return (
     <div>
-      <h1>APP PARA PELIS</h1>
-      <h2>ESTO FUNCIONA</h2>
+      <h1>PAGINA EN CONSTRUCCION</h1>
     </div>
   );
 };
