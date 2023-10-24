@@ -9,5 +9,6 @@ elif [[ $VERCEL_GIT_COMMIT_REF == "QA"  ]] ; then
 else
     echo "BRANCH: $VERCEL_GIT_COMMIT_REF"
     echo "URL: $VERCEL_BRANCH_URL"
+    echo "ENV: $VERCEL_ENV"
     echo "BRANCH NOT MATCHED"
 fi
