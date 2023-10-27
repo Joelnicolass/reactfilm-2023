@@ -1,10 +1,16 @@
 # PROYECTO FINAL CODO A CODO
 
+- VITEST AND REACT TESTING LIBRARY
 - https://www.robinwieruch.de/vitest-react-testing-library/
 
+- VERCEL AND GITHUB ACTIONS
 - https://vercel.com/guides/how-can-i-use-github-actions-with-vercel
 
+- VITE EVIROMENTS
 - https://vitejs.dev/guide/env-and-mode.html
+
+- PRETTIER AND ESLINT
+- https://levelup.gitconnected.com/configure-eslint-and-prettier-for-your-react-project-like-a-pro-2022-10287986a1b6
 
 - 1. CREAMOS EL PROYECTO DE REACT CON VITE
 - 2. INSTALAMOS LAS DEPENDENCIAS DE TESTING
