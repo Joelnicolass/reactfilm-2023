@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth } from "../../../core/auth/hook/use_auth";
 
 const LoginView = () => {
-  const { login, isLoggedIn } = useAuth();
+  const { login } = useAuth();
 
-  console.log(isLoggedIn);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setIsLoading(true);
+    try {
+      const form = e.target;
+      const formData = new FormData(form);
+      const { email, password } = Object.fromEntries(formData);
+
+      form.reset();
+
+      await login(email, password);
+    } catch (error) {
+      setError(error.response.data.msg);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div>
       <h1>ReactFilms</h1>
-      <button onClick={login}>Iniciar Sesión</button>
+
+      <form onSubmit={handleSubmit}>
+        <input type="email" name="email" />
+        <input type="password" name="password" />
+        <button type="submit">Iniciar Sesión</button>
+        <p>{error}</p>
+      </form>
     </div>
   );
 };
