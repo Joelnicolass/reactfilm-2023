@@ -31,10 +31,10 @@ export const AuthProvider = ({ children, fallback }) => {
   }, []);
 
   const login = async (email, password) => {
-    await authApi.post("/login", {
+    /* await authApi.post("/login", {
       email,
       password,
-    });
+    }); */
 
     setIsLoggedIn(true);
     saveLoginState(true);
