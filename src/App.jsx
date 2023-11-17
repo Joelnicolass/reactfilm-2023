@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
 import { RouterProvider } from "react-router-dom";
 import { appRouter } from "./core/routes/app_router";
 import RootProvider from "./core/providers/root_provider";
-import axios from "axios";
+
+// Swiper
+import { register as registerSwiper } from "swiper/element/bundle";
+registerSwiper();
 
 const App = () => {
   return (

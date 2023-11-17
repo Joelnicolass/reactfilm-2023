@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeView from "../../features/home/views/home_view";
-import LoginView from "../../features/login/views/login_view";
-import PrivateRoute from "../auth/components/private_route";
-import PublicRoute from "../auth/components/public_route";
+import PrivateRoute from "../../features/auth/components/private_route";
+import PublicRoute from "../../features/auth/components/public_route";
+import LoginView from "../../features/auth/views/login/views/login_view";
 
 export const appRouter = createBrowserRouter([
   {
