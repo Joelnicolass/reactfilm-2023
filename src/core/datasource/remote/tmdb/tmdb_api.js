@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const tmdb_api = axios.create({
+export const tmdb_api = axios.create({
   baseURL: "https://api.themoviedb.org/3",
   params: {
     api_key: import.meta.env.VITE_APP_TMDB_API_KEY,
@@ -8,7 +8,7 @@ const tmdb_api = axios.create({
   },
 });
 
-const tmdb_paths = {
+export const tmdb_paths = {
   movies: {
     popular: "/movie/popular",
     top_rated: "/movie/top_rated",
