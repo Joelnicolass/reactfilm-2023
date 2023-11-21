@@ -1,4 +1,4 @@
-import { tmdb_paths } from "../../core/datasource/remote/tmdb/tmdb_api";
+import { tmdb_paths } from "../../../../core/datasource/remote/tmdb/tmdb_api";
 
 export const tdmbMoviesTvAdapter = (response) => {
   const { results } = response;
