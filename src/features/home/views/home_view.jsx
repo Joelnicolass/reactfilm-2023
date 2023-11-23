@@ -26,7 +26,11 @@ const HomeView = () => {
     <div>
       <AppCarouselSection title={"Popular Movies"} data={popularMovies} />
 
-      <AppCard data={""}>
+      <AppCard
+        height="150px"
+        width="300px"
+        backgroundImageSrc={"https://picsum.photos/400/200?random=1"}
+      >
         <AppCard.Header>HOLAA</AppCard.Header>
       </AppCard>
     </div>
