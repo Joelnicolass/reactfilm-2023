@@ -2,6 +2,8 @@ import React from "react";
 import { AppSwiper } from "../app_swiper/app_swiper";
 import AppSwiperSlide from "../app_swiper/components/app_swiper_slide";
 import AppTitle from "../app_title/app_title";
+import AppCard from "../app_card/app_card";
+import { sizes } from "../../constants";
 
 /* 
     https://www.npmjs.com/package/react-loading-skeleton
@@ -14,18 +16,16 @@ const AppCarouselSection = ({ title, data }) => {
       <AppSwiper>
         {data?.map((e) => (
           <AppSwiperSlide key={e.id}>
-            <div
-              style={{
-                height: "150px",
-                width: "250px",
-                backgroundImage: `url(${e.backdrop})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
+            <AppCard
+              height="150px"
+              width="300px"
+              backgroundImageSrc={e.backdrop}
             >
-              <h3>{e.title}</h3>
-            </div>
+              <AppCard.Header>
+                <AppTitle size={sizes.sm}>{e.title}</AppTitle>
+              </AppCard.Header>
+              <AppCard.Footer>Footer</AppCard.Footer>
+            </AppCard>
           </AppSwiperSlide>
         ))}
       </AppSwiper>

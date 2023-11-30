@@ -36,6 +36,7 @@ const AppCard = ({
           borderColor,
           borderRadius,
           borderStyle: "solid",
+          overflow: "hidden",
           ...props.style,
         }}
       >
