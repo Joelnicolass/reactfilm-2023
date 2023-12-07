@@ -9,11 +9,10 @@ import {
 } from "../services/movies.services";
 
 import useSWR from "swr";
-import AppModal from "../../../core/components/app_modal/app_modal";
-import { useModal } from "../../../core/components/app_modal/hook/use_modal";
+import { useFavorites } from "../../../core/hooks/useFavorites";
 
 const HomeView = () => {
-  const { isOpen, closeModal, openModal } = useModal();
+  const { favorites } = useFavorites();
 
   const {
     data: popularMovies,
@@ -31,23 +30,15 @@ const HomeView = () => {
     <div>
       <div>
         <AppCarouselSection title={"Popular Movies"} data={popularMovies} />
+
+        <AppCarouselSection title={"Top Rated Movies"} data={topRatedMovies} />
+
+        <AppCarouselSection
+          key={`favorites-${favorites.length}`}
+          title={"Favorites"}
+          data={favorites}
+        />
       </div>
-
-      <button onClick={openModal}>ABRIR</button>
-
-      <AppModal open={isOpen} onClickedOut={closeModal}>
-        <div
-          style={{
-            height: "300px",
-            width: "300px",
-            backgroundColor: "white",
-            color: "red",
-          }}
-        >
-          hola soy un modal
-          <button onClick={closeModal}>Cerrar</button>
-        </div>
-      </AppModal>
     </div>
   );
 };

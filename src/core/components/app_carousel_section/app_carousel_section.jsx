@@ -4,12 +4,15 @@ import AppSwiperSlide from "../app_swiper/components/app_swiper_slide";
 import AppTitle from "../app_title/app_title";
 import AppCard from "../app_card/app_card";
 import { sizes } from "../../constants";
+import { useFavorites } from "../../hooks/useFavorites";
 
 /* 
     https://www.npmjs.com/package/react-loading-skeleton
 */
 
 const AppCarouselSection = ({ title, data }) => {
+  const { addFavorite, isFavorite, removeFavorite } = useFavorites();
+
   return (
     <>
       <AppTitle>{title}</AppTitle>
@@ -20,6 +23,13 @@ const AppCarouselSection = ({ title, data }) => {
               height="150px"
               width="300px"
               backgroundImageSrc={e.backdrop}
+              onClick={() => {
+                if (isFavorite(e)) {
+                  removeFavorite(e);
+                } else {
+                  addFavorite(e);
+                }
+              }}
             >
               <AppCard.Header>
                 <AppTitle size={sizes.sm}>{e.title}</AppTitle>

@@ -1,4 +1,5 @@
 import { AuthProvider } from "../../features/auth/provider/auth_provider";
+import FavoritesProvider from "./favorites/favorites_provider";
 
 const RootProvider = ({ children }) => {
   return (
@@ -9,7 +10,7 @@ const RootProvider = ({ children }) => {
         </div>
       }
     >
-      {children}
+      <FavoritesProvider>{children}</FavoritesProvider>
     </AuthProvider>
   );
 };

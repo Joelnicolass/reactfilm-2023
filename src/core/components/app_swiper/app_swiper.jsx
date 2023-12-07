@@ -19,6 +19,8 @@ export const AppSwiper = ({ children }) => {
 
     window.addEventListener("resize", reziseHandler);
 
+    reziseHandler();
+
     return () => {
       window.removeEventListener("resize", reziseHandler);
     };
