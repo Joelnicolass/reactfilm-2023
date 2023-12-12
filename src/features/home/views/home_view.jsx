@@ -26,6 +26,8 @@ const HomeView = () => {
     isLoading: topRatedMoviesIsLoading,
   } = useSWR("getTopRatedMovies", getTopRatedMovies);
 
+  // arregle algo
+
   return (
     <div>
       <div>
