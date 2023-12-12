@@ -27,6 +27,7 @@ const HomeView = () => {
   } = useSWR("getTopRatedMovies", getTopRatedMovies);
 
   // arregle algo
+  // arreglamos otra cosa
 
   return (
     <div>
