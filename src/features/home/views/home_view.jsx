@@ -10,8 +10,10 @@ import {
 
 import useSWR from "swr";
 import { useFavorites } from "../../../core/hooks/useFavorites";
+import { useAuth } from "../../auth/hook/use_auth";
 
 const HomeView = () => {
+  const { logout } = useAuth();
   const { favorites } = useFavorites();
 
   const {
@@ -39,6 +41,8 @@ const HomeView = () => {
           data={favorites}
         />
       </div>
+
+      <button onClick={logout}>LOGOUT</button>
     </div>
   );
 };
